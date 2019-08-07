@@ -8,29 +8,31 @@ function App() {
 
     testBtn.addEventListener("click", toggle);
 
+    // UNCOMMENT THIS, AND IT WILL WORK
     initUIFlow();
 
     function initUIFlow() {
         console.log("Init UI flow")
         pphwebsdk.Setup.isSetupComplete()
-            .then(() => {
+            .then(function() {
                 console.log("done")
             })
-            .catch(() => {
+            .catch(function() {
                 console.log("Never initialized before...")
-                runUIFlowForFirstTime(() => {
+                runUIFlowForFirstTime(function() {
                     console.log("done")
                 })
             })
     }
 
     function runUIFlowForFirstTime(cb) {
-        pphwebsdk.Setup.startUIFlow(() => {
+        pphwebsdk.Setup.startUIFlow(function() {
             cb()
         })
     }
 
     function toggle() {
+        console.log("toggling...")
         const text = status.textContent === "Off" ? "On" : "Off";
         status.textContent = text;
     }

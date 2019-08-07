@@ -2,7 +2,4 @@
 
 
 See the `frontend` directory for a vanilla JS web app. When running it and connecting to the mediator app
-running locally on the windows machine, I notice style changes on the app.
-
-
-See the `frontend-angular` directory for an Angular 7 web app. When running it and connecting to the mediator app running locally on the windows machine, I notice style changes and none of the buttons work anymore. IE clicking `Test Click` is not toggling the status anymore. The click event is not even fired anymore. 
+running locally on the windows machine, I notice style changes on the app. Also once I connected to the mediator app the test button does  not fire the click event anymore
