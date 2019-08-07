@@ -8,9 +8,10 @@ function App() {
 
     testBtn.addEventListener("click", toggle);
 
-
+    initUIFlow();
 
     function initUIFlow() {
+        console.log("Init UI flow")
         pphwebsdk.Setup.isSetupComplete()
             .then(() => {
                 console.log("done")

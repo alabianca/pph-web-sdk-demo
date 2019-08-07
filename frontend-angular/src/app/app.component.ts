@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
   constructor() {}
 
   public ngOnInit() {
-    //this.connectToMediatorApp();
+    this.connectToMediatorApp();
   }
 
 
